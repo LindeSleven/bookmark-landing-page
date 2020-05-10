@@ -1,0 +1,33 @@
+.hero {
+  display: flex;
+
+  &__container {
+    padding: 3rem;
+  }
+
+  &__text {
+    padding: 2.5rem 0;
+  }
+
+  &__btn {
+    margin-right: 1rem;
+  }
+
+  &__img {
+    max-width: 60rem;
+    position: relative;
+    z-index: 10;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25%;
+      right: -80%;
+      height: 80%;
+      width: 150%;
+      background-color: $color-primary-blue;
+      border-radius: 0 0 0 120px;
+      z-index: -1;
+    }
+  }
+}

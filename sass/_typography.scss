@@ -1,0 +1,80 @@
+// HEADING
+
+.heading-1 {
+  color: $color-neutral-blue-dark;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.heading-2 {
+  color: $color-neutral-blue-dark;
+}
+
+.heading-3 {
+  color: $color-neutral-blue-dark;
+}
+
+// BUTTON
+
+.btn {
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 1.2rem 2.8rem;
+  cursor: pointer;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #fff;
+  }
+
+  &--red {
+    background-color: $color-primary-red;
+
+    &:hover {
+      color: $color-primary-red;
+      border: 2px solid $color-primary-red;
+    }
+  }
+
+  &--blue {
+    background-color: $color-primary-blue;
+
+    &:hover {
+      color: $color-primary-blue;
+      border: 2px solid $color-primary-blue;
+    }
+  }
+
+  &--light {
+    background-color: $color-neutral-blue;
+    filter: brightness(170%);
+    color: $color-neutral-blue-dark;
+
+    &:hover {
+      color: $color-neutral-blue-dark;
+      border: 2px solid $color-neutral-blue-dark;
+    }
+  }
+}
+
+// MARGIN
+
+.padding-sm {
+  padding: 2rem 0;
+}
+
+.padding-md {
+  padding: 6rem 0;
+}
+
+.padding-lg {
+  padding: 8rem 0;
+}
+
+.padding-hg {
+  padding: 20rem 0;
+}

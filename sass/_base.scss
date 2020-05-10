@@ -1,0 +1,31 @@
+// COLOR VARIABLES
+
+$color-primary-blue: hsl(231, 69%, 60%);
+$color-primary-red: hsl(0, 94%, 66%);
+$color-neutral-blue: hsl(229, 8%, 60%);
+$color-neutral-blue-dark: hsl(229, 31%, 21%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px; 10px/16px = 0.625
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: $color-neutral-blue;
+}
+
+.wrapper {
+  max-width: 110rem;
+  margin: 4rem auto;
+}

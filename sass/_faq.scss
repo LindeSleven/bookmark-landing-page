@@ -1,0 +1,59 @@
+.faq {
+  text-align: center;
+  width: 45%;
+  margin: 0 auto;
+
+  &__text {
+    margin: 2rem auto 6rem auto;
+  }
+
+  &__list {
+    &__question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      color: $color-neutral-blue-dark;
+      //padding: 2rem 0 0 0;
+      transition: 0.4s;
+
+      &:hover {
+        color: $color-primary-red;
+      }
+
+      &:after {
+        content: url("../images/icon-arrow.svg");
+      }
+
+      &__active:after {
+        content: url("../images/icon-arrow.svg");
+        transform: rotate(180deg);
+      }
+    }
+
+    &__answer {
+      text-align: left;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
+    &__item {
+        border-top: 1px solid lighten($color-neutral-blue, 30%);
+        padding-top: 2.5rem;
+
+        &:last-child{
+            border-bottom: 1px solid lighten($color-neutral-blue, 30%);
+        }
+    }
+  }
+
+
+
+  &__btn {
+      margin-top: 4rem;
+  }
+
+}
