@@ -10,6 +10,7 @@
 
   &__nav {
     display: flex;
+    align-items: center;
     list-style: none;
 
     &__item {
@@ -27,6 +28,11 @@
         color: $color-primary-red;
       }
     }
+
+    &__social {
+      display: flex;
+      align-items: center;
+    }
   }
 
 
@@ -34,4 +40,20 @@
 
 .logo {
   fill: white;
+  margin-right: 4rem;
+}
+
+.social {
+  fill: white;
+  &:hover{
+    fill: $color-primary-red;
+  }
+}
+
+.social-link:nth-child(1){
+  margin-right: 2rem;
+}
+
+.social-link:nth-child(2) {
+  margin-right: 6rem;
 }

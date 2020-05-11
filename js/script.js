@@ -46,9 +46,25 @@ function showError(input, message) {
   small.innerText = message;
 }
 
+function showSucces(input) {
+  const formControl = input.parentElement;
+  formControl.classList.remove("error");
+}
+
 function checkRequired(input) {
   if (input.value.trim() === "") {
-    showError(input, "Whoops, please enter email");
+    showError(input, "Whoops, please enter an email address");
+  }
+}
+
+function checkEmail(input, e) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  if (re.test(input.value.trim())) {
+    showSucces(input);
+  } else {
+    showError(input, "Whoops, make sure it's an email");
+    e.preventDefault();
   }
 }
 
@@ -56,5 +72,5 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   checkRequired(email);
-  //checkEmail(email);
+  checkEmail(email);
 });

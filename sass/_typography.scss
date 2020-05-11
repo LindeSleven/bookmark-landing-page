@@ -33,24 +33,25 @@
 
   &--red {
     background-color: $color-primary-red;
+    border: 2px solid $color-primary-red;
 
     &:hover {
       color: $color-primary-red;
-      border: 2px solid $color-primary-red;
     }
   }
 
   &--blue {
     background-color: $color-primary-blue;
+    border: 2px solid $color-primary-blue;
 
     &:hover {
       color: $color-primary-blue;
-      border: 2px solid $color-primary-blue;
     }
   }
 
   &--light {
     background-color: $color-neutral-blue;
+    border: 2px solid $color-neutral-blue;
     filter: brightness(170%);
     color: $color-neutral-blue-dark;
 

@@ -29,7 +29,6 @@
       padding: 1.5rem 2rem;
     }
 
-    //&.error { //:invalid
     &__input-wrapper.error {
       padding: 0.5rem;
       background-color: $color-primary-red;
@@ -43,8 +42,6 @@
         background-image: url("../images/icon-error.svg");
       }
     }
-
-    //}
 
     &__input {
       width: 100%;
