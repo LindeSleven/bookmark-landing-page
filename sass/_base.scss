@@ -5,6 +5,12 @@ $color-primary-red: hsl(0, 94%, 66%);
 $color-neutral-blue: hsl(229, 8%, 60%);
 $color-neutral-blue-dark: hsl(229, 31%, 21%);
 
+// MEDIA QUERIES
+$mobile: 37.5em;        // 0-600px
+$tab-port: 56.25em;     // 600-900px 
+$tab-land: 75em;        // 900-1200px
+$big-desktop: 112.5em;  // 1800+px
+
 *,
 *::before,
 *::after {
@@ -16,6 +22,10 @@ $color-neutral-blue-dark: hsl(229, 31%, 21%);
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 0.625
+
+  @media screen and (max-width: $mobile){
+    font-size: 55%;
+  }
 }
 
 body {
@@ -23,9 +33,15 @@ body {
   font-size: 1.8rem;
   line-height: 1.6;
   color: $color-neutral-blue;
+
+  @media screen and (max-width: $mobile){
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 }
 
 .wrapper {
   max-width: 110rem;
   margin: 4rem auto;
+
 }

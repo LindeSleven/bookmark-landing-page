@@ -1,8 +1,19 @@
 .hero {
   display: flex;
 
+  @media screen and (max-width: $mobile){
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__container {
     padding: 3rem;
+
+    @media screen and (max-width: $mobile){
+      order: 2;
+      text-align: center;
+      margin-top: 6rem;
+    }
   }
 
   &__text {
@@ -17,6 +28,10 @@
     max-width: 60rem;
     position: relative;
     z-index: 10;
+
+    @media screen and (max-width: $mobile){
+      order: 1;
+    }
 
     &::after {
       content: "";

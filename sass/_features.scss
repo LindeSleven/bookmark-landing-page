@@ -3,7 +3,11 @@
 
   &__text {
     width: 50%;
-    margin: 0 auto 4rem auto;
+    margin: 2rem auto 4rem auto;
+
+    @media screen and (max-width: $mobile){
+      width: 80%;
+    }
   }
 
   &__items {
@@ -13,42 +17,41 @@
     width: 60%;
     padding-left: 2rem;
     padding-right: 2rem;
-    //padding-bottom: 2rem;
     margin: 0 auto 6rem auto;
-    border-bottom: 1px solid $color-neutral-blue;
-    //position: relative;
+    width: fit-content;
+
+    @media screen and (max-width: $mobile){
+      width: 80%;
+      display: block;
+    }
+    
 
     &__tab {
       cursor: pointer;
-      /*display: inline-block;
-      padding: 2rem 4rem;
+      display: inline-block;
+      padding: 3rem 4rem;
+      font-family: inherit;
+      font-size: 1.8rem;
+      border: none;
+      outline: none;
+      color: inherit;
       background-color: transparent;
-      border-bottom: 6px solid whitesmoke;*/
+      border-bottom: 4px solid whitesmoke;  
 
       &.active {
-        display: inline-block;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        padding-bottom: 3rem;
-        border-bottom: 5px solid $color-primary-red;
-        /*color: $color-primary-red;
+        color: $color-primary-red;
         border-color: $color-primary-red;
-        border-bottom-width: 4px;*/
-        
-
-        /*&::after{
-            content: "";
-            position: absolute;
-            width: 22rem;
-            height: 3px;
-            left: 0; 
-            bottom: 0;
-            border-bottom: 5px solid $color-primary-red;
-        }*/
+        border-bottom-width: 4px;
       }
 
       &:hover {
         color: $color-primary-red;
+      }
+
+      @media screen and (max-width: $mobile){
+        border-bottom: 2px solid whitesmoke;
+        display: block;
+        width: 100%;
       }
     }
   }
@@ -56,9 +59,18 @@
   &__content {
     display: flex;
 
+    @media screen and (max-width: $mobile){
+      flex-direction: column;
+    }
+
     &__img {
       position: relative;
+      flex: 1;
       z-index: 10;
+
+      @media screen and (max-width: $mobile){
+        flex: 0;
+      }
 
       &::after {
         content: "";
@@ -74,9 +86,14 @@
     }
 
     &__text {
+      flex: 1;
       text-align: left;
       padding-left: 5rem;
       align-self: center;
+
+      @media screen and (max-width: $mobile){
+        flex: 0;
+      }
 
       p {
         padding: 2rem 0;

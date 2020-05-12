@@ -8,6 +8,10 @@
 
 .heading-2 {
   color: $color-neutral-blue-dark;
+
+  @media screen and (max-width: $mobile){
+    font-size: 4rem;
+  }
 }
 
 .heading-3 {
@@ -26,6 +30,11 @@
   cursor: pointer;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
+
+  @media screen and (max-width: $mobile){
+    font-size: 1.8rem;
+    padding: 2rem 3rem;
+  }
 
   &:hover {
     background-color: #fff;
