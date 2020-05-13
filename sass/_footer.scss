@@ -6,6 +6,10 @@
     align-items: center;
     color: #fff;
     padding: 2rem 8rem;
+
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
   }
 
   &__nav {
@@ -13,8 +17,16 @@
     align-items: center;
     list-style: none;
 
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
+
     &__item {
       padding: 0 2rem;
+
+      @media screen and (max-width: $mobile) {
+        margin: 1rem 0;
+      }
     }
 
     &__link {
@@ -32,28 +44,42 @@
     &__social {
       display: flex;
       align-items: center;
+
+      @media screen and (max-width: $mobile) {
+        margin-top: 2rem;
+      }
     }
   }
-
-
 }
 
 .logo {
   fill: white;
   margin-right: 4rem;
+
+  @media screen and (max-width: $mobile) {
+    margin: 2rem 0;
+  }
 }
 
 .social {
   fill: white;
-  &:hover{
+  &:hover {
     fill: $color-primary-red;
   }
 }
 
-.social-link:nth-child(1){
+.social-link:nth-child(1) {
   margin-right: 2rem;
+
+  @media screen and (max-width: $mobile) {
+    margin-right: 4rem;
+  }
 }
 
 .social-link:nth-child(2) {
   margin-right: 6rem;
+
+  @media screen and (max-width: $mobile) {
+    margin-right: 0rem;
+  }
 }

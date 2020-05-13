@@ -7,6 +7,10 @@
     margin: 0 auto;
     text-align: center;
 
+    @media screen and (max-width: $mobile){
+      width: 90%;
+    }
+
     &__text {
       font-size: 1.2rem;
       text-transform: uppercase;
@@ -24,15 +28,24 @@
     display: flex;
     align-items: flex-start;
 
+    @media screen and (max-width: $mobile){
+      flex-direction: column;
+    }
+
     &__input,
     &__btn {
       padding: 1.5rem 2rem;
+      @media screen and (max-width: $mobile){
+        width: 100%;
+      }
     }
 
     &__input-wrapper.error {
       padding: 0.5rem;
       background-color: $color-primary-red;
       transform: translateY(-0.5rem);
+
+      
 
       & small {
         display: inline-block;
@@ -72,6 +85,11 @@
           font-size: 1rem;
           letter-spacing: 1px;
           font-style: italic;
+        }
+
+        @media screen and (max-width: $mobile){
+          width: 100%;
+          margin-bottom: 2rem;
         }
       }
     }

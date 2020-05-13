@@ -10,7 +10,9 @@ html {
   font-size: 62.5%; }
   @media screen and (max-width: 37.5em) {
     html {
-      font-size: 55%; } }
+      font-size: 55%;
+      overflow-x: hidden;
+      width: 100%; } }
 
 body {
   font-family: "Rubik", sans-serif;
@@ -19,8 +21,8 @@ body {
   color: #9194a1; }
   @media screen and (max-width: 37.5em) {
     body {
-      max-width: 100%;
-      overflow-x: hidden; } }
+      overflow-x: hidden;
+      width: 100%; } }
 
 .wrapper {
   max-width: 110rem;
@@ -33,6 +35,9 @@ body {
     max-width: 48rem;
     margin: 0 auto;
     text-align: center; }
+    @media screen and (max-width: 37.5em) {
+      .contact__form {
+        width: 90%; } }
     .contact__form__text {
       font-size: 1.2rem;
       text-transform: uppercase;
@@ -44,8 +49,14 @@ body {
     width: 100%;
     display: flex;
     align-items: flex-start; }
+    @media screen and (max-width: 37.5em) {
+      .contact .form {
+        flex-direction: column; } }
     .contact .form__input, .contact .form__btn {
       padding: 1.5rem 2rem; }
+      @media screen and (max-width: 37.5em) {
+        .contact .form__input, .contact .form__btn {
+          width: 100%; } }
     .contact .form__input-wrapper.error {
       padding: 0.5rem;
       background-color: #fa5757;
@@ -79,23 +90,37 @@ body {
           font-size: 1rem;
           letter-spacing: 1px;
           font-style: italic; }
+        @media screen and (max-width: 37.5em) {
+          .contact .form__input-wrapper {
+            width: 100%;
+            margin-bottom: 2rem; } }
 
 .download {
   text-align: center; }
   .download__text {
     width: 50%;
     margin: 2rem auto 6rem auto; }
+    @media screen and (max-width: 37.5em) {
+      .download__text {
+        width: 80%; } }
   .download__items {
     display: flex;
     justify-content: center;
     list-style: none;
     margin: 0 10rem; }
+    @media screen and (max-width: 37.5em) {
+      .download__items {
+        flex-direction: column;
+        margin: 0 5rem; } }
   .download__item {
     padding: 2rem 0;
     border-radius: 15px;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.09); }
     .download__item:not(:last-child) {
       margin-right: 4rem; }
+      @media screen and (max-width: 37.5em) {
+        .download__item:not(:last-child) {
+          margin-right: 0; } }
     .download__item--firefox {
       transform: translateY(4rem); }
     .download__item--opera {
@@ -112,6 +137,9 @@ body {
   text-align: center;
   width: 45%;
   margin: 0 auto; }
+  @media screen and (max-width: 37.5em) {
+    .faq {
+      width: 80%; } }
   .faq__text {
     margin: 2rem auto 6rem auto; }
   .faq__list__question {
@@ -197,7 +225,11 @@ body {
       z-index: 10; }
       @media screen and (max-width: 37.5em) {
         .features__content__img {
-          flex: 0; } }
+          flex: 0;
+          max-width: 90%;
+          margin: 0 auto; } }
+      .features__content__img img {
+        width: 100%; }
       .features__content__img::after {
         content: "";
         position: absolute;
@@ -215,9 +247,14 @@ body {
       align-self: center; }
       @media screen and (max-width: 37.5em) {
         .features__content__text {
-          flex: 0; } }
+          margin-top: 6rem;
+          text-align: center;
+          padding-left: 0rem;
+          width: 80%; } }
       .features__content__text p {
         padding: 2rem 0; }
+      .features__content__text .btn {
+        display: none; }
 
 [data-tab-content] {
   display: none; }
@@ -232,13 +269,22 @@ body {
   align-items: center;
   color: #fff;
   padding: 2rem 8rem; }
+  @media screen and (max-width: 37.5em) {
+    .footer__navbar {
+      flex-direction: column; } }
 
 .footer__nav {
   display: flex;
   align-items: center;
   list-style: none; }
+  @media screen and (max-width: 37.5em) {
+    .footer__nav {
+      flex-direction: column; } }
   .footer__nav__item {
     padding: 0 2rem; }
+    @media screen and (max-width: 37.5em) {
+      .footer__nav__item {
+        margin: 1rem 0; } }
   .footer__nav__link {
     color: #fff;
     text-decoration: none;
@@ -250,10 +296,16 @@ body {
   .footer__nav__social {
     display: flex;
     align-items: center; }
+    @media screen and (max-width: 37.5em) {
+      .footer__nav__social {
+        margin-top: 2rem; } }
 
 .logo {
   fill: white;
   margin-right: 4rem; }
+  @media screen and (max-width: 37.5em) {
+    .logo {
+      margin: 2rem 0; } }
 
 .social {
   fill: white; }
@@ -262,18 +314,26 @@ body {
 
 .social-link:nth-child(1) {
   margin-right: 2rem; }
+  @media screen and (max-width: 37.5em) {
+    .social-link:nth-child(1) {
+      margin-right: 4rem; } }
 
 .social-link:nth-child(2) {
   margin-right: 6rem; }
+  @media screen and (max-width: 37.5em) {
+    .social-link:nth-child(2) {
+      margin-right: 0rem; } }
 
 .hero {
   display: flex; }
   @media screen and (max-width: 37.5em) {
     .hero {
       flex-direction: column;
-      align-items: center; } }
+      align-items: center;
+      justify-content: center; } }
   .hero__container {
-    padding: 3rem; }
+    padding: 3rem;
+    flex: 1; }
     @media screen and (max-width: 37.5em) {
       .hero__container {
         order: 2;
@@ -284,12 +344,16 @@ body {
   .hero__btn {
     margin-right: 1rem; }
   .hero__img {
+    flex: 1;
     max-width: 60rem;
     position: relative;
     z-index: 10; }
     @media screen and (max-width: 37.5em) {
       .hero__img {
-        order: 1; } }
+        order: 1;
+        text-align: center; } }
+    .hero__img img {
+      width: 100%; }
     .hero__img::after {
       content: "";
       position: absolute;
@@ -328,12 +392,15 @@ body {
   color: #252b46;
   font-size: 4rem;
   line-height: 1; }
+  @media screen and (max-width: 37.5em) {
+    .heading-1 {
+      font-size: 3.5rem; } }
 
 .heading-2 {
   color: #252b46; }
   @media screen and (max-width: 37.5em) {
     .heading-2 {
-      font-size: 4rem; } }
+      font-size: 2.8rem; } }
 
 .heading-3 {
   color: #252b46; }
@@ -350,8 +417,8 @@ body {
   transition: all 0.2s; }
   @media screen and (max-width: 37.5em) {
     .btn {
-      font-size: 1.8rem;
-      padding: 2rem 3rem; } }
+      font-size: 1.6rem;
+      padding: 1.8rem 2rem; } }
   .btn:hover {
     background-color: #fff; }
   .btn--red {

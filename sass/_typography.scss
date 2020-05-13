@@ -4,13 +4,17 @@
   color: $color-neutral-blue-dark;
   font-size: 4rem;
   line-height: 1;
+
+  @media screen and (max-width: $mobile){
+    font-size: 3.5rem;
+  }
 }
 
 .heading-2 {
   color: $color-neutral-blue-dark;
 
   @media screen and (max-width: $mobile){
-    font-size: 4rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -32,8 +36,8 @@
   transition: all 0.2s;
 
   @media screen and (max-width: $mobile){
-    font-size: 1.8rem;
-    padding: 2rem 3rem;
+    font-size: 1.6rem;
+    padding: 1.8rem 2rem;
   }
 
   &:hover {
@@ -71,7 +75,7 @@
   }
 }
 
-// MARGIN
+// PADDING
 
 .padding-sm {
   padding: 2rem 0;
