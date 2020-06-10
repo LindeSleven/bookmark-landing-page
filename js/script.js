@@ -74,3 +74,26 @@ form.addEventListener("submit", function (e) {
   checkRequired(email);
   checkEmail(email);
 });
+
+// MOBILE NAVBAR
+
+/*const hamburger = document.querySelector(".navbar-toggle");
+const navList = document.querySelector("#js-menu");
+const navLinks = document.querySelectorAll(".navbar-nav__link");
+
+hamburger.addEventListener("click", () => {
+  navList.classList.toggle("open");
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navList.classList.remove("open");
+  });
+});*/
+
+const navbar = document.querySelector(".navbar");
+const hamburger = document.querySelector(".navbar-toggle");
+
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("open");
+});

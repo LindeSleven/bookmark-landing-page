@@ -6,8 +6,8 @@ $color-neutral-blue: hsl(229, 8%, 60%);
 $color-neutral-blue-dark: hsl(229, 31%, 21%);
 
 // MEDIA QUERIES
-$mobile: 37.5em; // 0-600px
-$tab-port: 56.25em; // 600-900px
+$mobile: 26.6em; // 0-425px
+$tab-port: 56.25em; // 425-900px
 $tab-land: 75em; // 900-1200px
 $big-desktop: 112.5em; // 1800+px
 
@@ -22,12 +22,17 @@ $big-desktop: 112.5em; // 1800+px
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 0.625
-
+  overflow-x: hidden;
+  @media screen and (max-width: $tab-land) {
+    font-size: 56.25%;
+  }
+  @media screen and (max-width: $tab-port) {
+    font-size: 50%;
+  }
   @media screen and (max-width: $mobile) {
-    font-size: 55%;
-    overflow-x: hidden;
     width: 100%;
   }
+
 }
 
 body {
@@ -35,8 +40,8 @@ body {
   font-size: 1.8rem;
   line-height: 1.6;
   color: $color-neutral-blue;
+  overflow-x: hidden;
   @media screen and (max-width: $mobile) {
-    overflow-x: hidden;
     width: 100%;
   }
 }

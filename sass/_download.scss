@@ -5,7 +5,7 @@
     width: 50%;
     margin: 2rem auto 6rem auto;
 
-    @media screen and (max-width: $mobile){
+    @media screen and (max-width: $mobile) {
       width: 80%;
     }
   }
@@ -16,7 +16,7 @@
     list-style: none;
     margin: 0 10rem;
 
-    @media screen and (max-width: $mobile){
+    @media screen and (max-width: $tab-port) {
       flex-direction: column;
       margin: 0 5rem;
     }
@@ -28,7 +28,7 @@
     &:not(:last-child) {
       margin-right: 4rem;
 
-      @media screen and (max-width: $mobile){
+      @media screen and (max-width: $tab-port) {
         margin-right: 0;
       }
     }
@@ -43,16 +43,27 @@
     }
 
     &__logo {
-        margin-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     p {
-        font-size: 1.4rem;
-        margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__dots {
+      @media screen and (max-width: $mobile) {
+        width: 90%;
+      }
     }
   }
 
   &__btn {
-      margin-top: 1.5rem;
+    margin-top: 1.5rem;
+
+    @media screen and (max-width: $tab-port) {
+      display: block;
+      margin: 1.5rem auto;
+    }
   }
 }

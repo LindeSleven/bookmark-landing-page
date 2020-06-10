@@ -87,6 +87,10 @@
 
 .padding-lg {
   padding: 8rem 0;
+
+  @media screen and (max-width: $mobile){
+    padding: 6rem 0;
+  }
 }
 
 .padding-hg {
